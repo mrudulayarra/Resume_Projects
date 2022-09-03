@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+
+    <title>Maze Game</title>
+
+    <!-- css file -->
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- fontawesome icons-->
+
+    <script src="https://kit.fontawesome.com/a82709f8dc.js"></script>
+
+    <!-- matter.js cdn -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js"
+        integrity="sha512-3CP+e7z5ieYYTIyvRvV3eGVYR67yXg5V2mWfg8pEJJd2mlh8tG/cnDv5scTmRztEYHTksBlpPOmxFOiMtHfZdQ=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="rules">
+        <h2>Maze Game</h2>
+        <p>find a way between the circle and square.</p>
+        <p>choose the level to play.</p>
+        <div class="levels">
+            <button class="easy">easy</button>
+            <button class="medium">medium</button>
+            <button class="hard">hard</button>
+        </div>
+    </div>
+    <div class="winner hidden">
+        <h2>Congrats!!!<br />You Won</h2>
+        <button class="playagain">play again</button>
+    </div>
+    <section class="hide-controls">
+        <div class="controls">
+            <span class="up"><i class="fas fa-angle-up"></i></span>
+            <span class="down"><i class="fas fa-angle-down"></i></span>
+            <span class="right"><i class="fas fa-angle-right"></i></span>
+            <span class="left"><i class="fas fa-angle-left"></i></span>
+        </div>
+    </section>
+    <!-- javascript file -->
+
+    <script src="./javascript/utilities.js"></script>
+    <script src="./javascript/app.js"></script>
+</body>
+
+</html>
