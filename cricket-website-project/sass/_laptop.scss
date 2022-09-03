@@ -1,0 +1,142 @@
+@media screen and (min-width: 992px) {
+  nav {
+    padding: 0.8rem 0 0.8rem 0;
+    .nav-center {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        padding: 0;
+        span {
+          display: none;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        height: auto;
+        li {
+          padding: 0;
+          a {
+            margin-right: 0.7rem;
+            transition: $transition;
+          }
+          &:hover {
+            a {
+              color: $color_primary-5;
+            }
+            background: none;
+          }
+        }
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+        a {
+          margin-right: 0.4rem;
+          transition: $transition;
+          &:hover {
+            color: $color_primary-8;
+          }
+        }
+      }
+    }
+  }
+  header {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8),
+        hsla(185, 62%, 45%, 0.6)
+      ),
+      url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    h1 {
+      letter-spacing: $spacing;
+    }
+  }
+  .services {
+    .section {
+      .outer {
+        flex: 0 0 33.33%;
+      }
+    }
+  }
+  .feature {
+    .outer {
+      flex: 0 0 calc(33.33% - 1rem);
+    }
+  }
+  .contact {
+    .section {
+      display: flex;
+      justify-content: space-between;
+      .contact-content {
+        flex: 0 0 50%;
+      }
+      form {
+        margin-left: 2rem;
+        flex: 0 0 50%;
+        align-items: center;
+      }
+    }
+  }
+  .gallery {
+    div {
+      flex: 0 0 25%;
+    }
+  }
+}
+@media screen and (min-width: 1020px) {
+  .about-us {
+    .section {
+      display: flex;
+      .about-us-image-container {
+        flex: 0 0 50%;
+      }
+      .about-us-content {
+        padding-left: 4rem;
+        margin-top: 0;
+        flex: 0 0 50%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-us {
+    .section {
+      .about-us-image-container {
+        border: 7px solid $color_primary-5;
+        max-width: 35rem;
+        height: 24rem;
+        position: relative;
+        img {
+          display: block;
+          height: 100%;
+          position: absolute;
+          top: 8%;
+          left: 5%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .services {
+    .section {
+      .outer {
+        text-align: left;
+        display: flex;
+        .inner {
+          margin-left: 1rem;
+          p {
+            margin-bottom: 0;
+            max-width: 20rem;
+          }
+        }
+      }
+    }
+  }
+}

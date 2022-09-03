@@ -1,0 +1,14 @@
+.btn {
+  background-color: $color_primary-5;
+  outline: none;
+  border: none;
+  color: $color_white;
+  text-transform: uppercase;
+  padding: 0.7rem 1rem;
+  letter-spacing: $spacing;
+  transition: $transition;
+  &:hover {
+    color: $color_grey-3;
+    background-color: $color_primary-8;
+  }
+}
