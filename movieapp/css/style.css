@@ -1,0 +1,242 @@
+/*
+GOOGLE FONTS
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Zen+Dots&display=swap");
+
+/* 
+Variables
+*/
+
+:root {
+  /* darkest grey - used for headings */
+  --color-grey-1: hsl(209, 61%, 16%);
+  --color-grey-2: hsl(211, 39%, 23%);
+  --color-grey-3: hsl(209, 34%, 30%);
+  --color-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --color-grey-5: hsl(210, 22%, 49%);
+  --color-grey-6: hsl(209, 23%, 60%);
+  --color-grey-7: hsl(211, 27%, 70%);
+  --color-grey-8: hsl(210, 31%, 80%);
+  --color-grey-9: hsl(212, 33%, 89%);
+  --color-grey-10: hsl(210, 36%, 96%);
+  --color-white: #fff;
+  --color-black: black;
+  --font-primary: "Zen Dots", cursive;
+  --font-secondary: "Roboto", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --max-width: 1170px;
+  --light-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/*
+   GLOBAL STYLES, FASTER DEVELOPMENT, THIS IS REUSABLE CODE
+    THIS GLOBAL STYLES ARE OVERRIDED IF NEEDED
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-secondary);
+  background: var(--color-black);
+  color: var(--color-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/* header styling */
+
+header {
+  padding: 2rem 2rem 0 2rem;
+}
+header span {
+  margin-left: 10px;
+}
+.title {
+  color: var(--color-white);
+  letter-spacing: var(--spacing);
+  font-family: var(--font-primary);
+}
+.underline {
+  width: 60vw;
+  background-color: var(--color-white);
+  height: 5px;
+  margin-top: 7px;
+  border-radius: 40px;
+}
+
+/* section styling */
+
+section {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  display: grid;
+  gap: 0 4rem;
+}
+@media screen and (min-width: 700px) {
+  section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+input {
+  width: 100%;
+  display: block;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+}
+label {
+  display: inline-block;
+  font-weight: bold;
+  color: var(--color-white);
+  margin-top: 2rem;
+}
+.autocomplete {
+  background-color: var(--color-white);
+  margin-top: 1px;
+}
+.autocomplete div {
+  display: flex;
+  height: 100px;
+  transition: var(--transition);
+  border-top: 1px solid var(--color-grey-8);
+  cursor: pointer;
+}
+.autocomplete div:hover {
+  background-color: var(--color-grey-9);
+}
+.autocomplete img {
+  width: 100px;
+  object-fit: contain;
+}
+.autocomplete img[src=""] {
+  width: 30px;
+}
+.autocomplete h4 {
+  align-self: center;
+}
+.resultwrapper {
+  background-color: var(--color-white);
+  margin-top: 1rem;
+  color: var(--color-black);
+}
+.resultmovie-header {
+  display: flex;
+  padding: 1rem;
+}
+.resultmovie-header img {
+  width: 130px;
+  object-fit: cover;
+}
+.resultmovie-header img[src=""] {
+  width: 0;
+}
+.resultmovie-header-text {
+  align-self: center;
+  height: 50%;
+  padding: 0 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: initial;
+}
+.resultmovie-critic {
+  padding: 1rem;
+  display: grid;
+  gap: 0.2rem;
+  border-top: 1px solid var(--color-black);
+}
+.red {
+  background-color: tomato;
+  color: var(--color-white);
+}
+.green {
+  background-color: rgba(0, 128, 0, 0.8);
+  color: var(--color-white);
+}
+@media screen and (max-width: 1200px) {
+  .resultmovie-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--color-white);
+  }
+  .resultmovie-header-text {
+    padding-top: 1rem;
+    text-align: center;
+  }
+}
+
+.note {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 2rem;
+  text-align: center;
+  width: 60vw;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+}
+.hide {
+  display: none;
+}
+p {
+  font-size: 1rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
